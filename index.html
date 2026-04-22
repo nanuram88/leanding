@@ -25,6 +25,7 @@ body{
   padding:20px;
 }
 
+/* HEADLINE */
 .headline{
   color:#ffe600;
   font-size:22px;
@@ -32,6 +33,7 @@ body{
   margin-bottom:15px;
 }
 
+/* LOGO FIXED */
 .logo{
   width:170px;
   height:170px;
@@ -48,18 +50,21 @@ body{
   object-fit:cover;
 }
 
+/* TITLE */
 .title{
   font-size:28px;
   font-weight:900;
   margin-top:10px;
 }
 
+/* LIVE */
 .live{
   margin-top:10px;
   color:#00ff9c;
   font-weight:bold;
 }
 
+/* TIMER */
 .timer{
   margin-top:10px;
   color:#ff4d4d;
@@ -67,6 +72,7 @@ body{
   font-size:16px;
 }
 
+/* BUTTON */
 .btn{
   display:block;
   margin-top:20px;
@@ -86,13 +92,14 @@ body{
   100%{transform:scale(1);}
 }
 
+/* FOOTER */
 .trust{
   margin-top:10px;
   font-size:12px;
   color:#aaa;
 }
 </style>
-<!-- Meta Pixel Code -->
+ <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -109,15 +116,15 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
 </head>
 
 <body>
 
 <div class="container">
 
-  <div class="headline">INDIA'S FAST GROWING CHANNEL 🚀</div>
+  <div class="headline">INDIA'S MOST DEMANDING CHANNEL 🔥</div>
 
+  <!-- LOGO -->
   <div class="logo">
     <img src="logo.jpg.jpeg" alt="logo">
   </div>
@@ -132,6 +139,7 @@ src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
     ⏳ Redirecting in <span id="redirectTimer">8</span>s...
   </div>
 
+  <!-- TELEGRAM LINK -->
   <a href="https://t.me/+E0LMKd8nXc1hOWQ1" class="btn" id="joinBtn">
     🚀 JOIN FREE NOW
   </a>
@@ -142,8 +150,8 @@ src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
 
 <script>
 
-// TIMER FIXED (59 seconds)
-let time = 59;
+// TIMER + REDIRECT
+let time =59;
 let redirectURL = "https://t.me/+E0LMKd8nXc1hOWQ1";
 
 let countdown = setInterval(()=>{
@@ -162,9 +170,9 @@ setInterval(()=>{
   el.innerText = parseInt(el.innerText) + Math.floor(Math.random()*3);
 },3000);
 
-// CLICK + PIXEL TRACKING
+// CLICK TRACK
 document.getElementById("joinBtn").addEventListener("click", ()=>{
-  fbq('track', 'Lead'); // conversion tracking
+  console.log("CTA Clicked");
 });
 
 </script>
