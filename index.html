@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Spribe</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+body{
+  background: radial-gradient(circle,#2b0000,#000);
+  color:#fff;
+  text-align:center;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+}
+
+.headline{
+  color:#ffe600;
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.logo{
+  width:170px;
+  height:170px;
+  margin:20px auto;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 0 25px red;
+  background:#111;
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.title{
+  font-size:28px;
+  font-weight:900;
+  margin-top:10px;
+}
+
+.live{
+  margin-top:10px;
+  color:#00ff9c;
+  font-weight:bold;
+}
+
+.timer{
+  margin-top:10px;
+  color:#ff4d4d;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.btn{
+  display:block;
+  margin-top:20px;
+  padding:16px;
+  background:linear-gradient(45deg,#0088cc,#004466);
+  border-radius:12px;
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+  animation:pulse 1.5s infinite;
+  font-weight:bold;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+.trust{
+  margin-top:10px;
+  font-size:12px;
+  color:#aaa;
+}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1692144778868322');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="headline">INDIA'S FAST GROWING CHANNEL 🚀</div>
+
+  <div class="logo">
+    <img src="WhatsApp Image 2026-04-14 at 4.06.13 PM.jpeg" alt="logo">
+  </div>
+
+  <div class="title">spribe</div>
+
+  <div class="live">
+    👥 <span id="liveCount">1321</span> joined today
+  </div>
+
+  <div class="timer">
+    ⏳ Redirecting in <span id="redirectTimer">8</span>s...
+  </div>
+
+  <a href="https://t.me/+E0LMKd8nXc1hOWQ1" class="btn" id="joinBtn">
+    🚀 JOIN FREE NOW
+  </a>
+
+  <div class="trust">🔒 Free • No Spam • Instant Access</div>
+
+</div>
+
+<script>
+
+// TIMER FIXED (8 seconds)
+let time = 8;
+let redirectURL = "https://t.me/+E0LMKd8nXc1hOWQ1";
+
+let countdown = setInterval(()=>{
+  document.getElementById("redirectTimer").innerText = time;
+  time--;
+
+  if(time < 0){
+    clearInterval(countdown);
+    window.location.href = redirectURL;
+  }
+},1000);
+
+// LIVE COUNTER
+setInterval(()=>{
+  let el = document.getElementById("liveCount");
+  el.innerText = parseInt(el.innerText) + Math.floor(Math.random()*3);
+},3000);
+
+// CLICK + PIXEL TRACKING
+document.getElementById("joinBtn").addEventListener("click", ()=>{
+  fbq('track', 'Lead'); // conversion tracking
+});
+
+</script>
+
+</body>
+</html>
