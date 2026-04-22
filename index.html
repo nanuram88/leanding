@@ -92,7 +92,8 @@ body{
   color:#aaa;
 }
 </style>
-<!-- Meta Pixel Code -->
+
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -102,13 +103,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1692144778868322');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 </head>
 
@@ -119,8 +117,7 @@ src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
   <div class="headline">INDIA'S FAST GROWING CHANNEL 🚀</div>
 
   <div class="logo">
-    <img src="WhatsApp Image 2026-04-22 at 9.21.57 AM.jpeg
-" alt="logo">
+    <img src="logo.jpg" alt="logo">
   </div>
 
   <div class="title">spribe</div>
@@ -143,19 +140,20 @@ src="https://www.facebook.com/tr?id=1692144778868322&ev=PageView&noscript=1"
 
 <script>
 
-// TIMER FIXED (8 seconds)
+// TIMER (8 seconds)
 let time = 59;
 let redirectURL = "https://t.me/+E0LMKd8nXc1hOWQ1";
 
-let countdown = setInterval(()=>{
+let countdown = setInterval(() => {
   document.getElementById("redirectTimer").innerText = time;
-  time--;
 
-  if(time < 0){
+  if (time <= 0) {
     clearInterval(countdown);
     window.location.href = redirectURL;
   }
-},1000);
+
+  time--;
+}, 1000);
 
 // LIVE COUNTER
 setInterval(()=>{
@@ -163,9 +161,9 @@ setInterval(()=>{
   el.innerText = parseInt(el.innerText) + Math.floor(Math.random()*3);
 },3000);
 
-// CLICK + PIXEL TRACKING
+// BUTTON TRACKING
 document.getElementById("joinBtn").addEventListener("click", ()=>{
-  fbq('track', 'Lead'); // conversion tracking
+  fbq('track', 'Lead');
 });
 
 </script>
